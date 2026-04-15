@@ -1,0 +1,45 @@
+name: Sync & Audit Architecture
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'src/**'
+      - '.github/agents/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  agent-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install openai
+
+      - name: Generate & Audit Architecture Diagram
+        env:
+          GH_MODELS_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
+        run: python .github/scripts/generate_diagram.py
+
+      - name: Commit & Push Diagram
+        run: |
+          git config --global user.name "motercode"
+          git config --global user.email "motercode@gmail.com"
+          if [[ -n $(git status --porcelain docs/architecture.mmd) ]]; then
+            git add docs/architecture.mmd
+            git commit -m "docs: sync architecture diagram after push [skip ci]"
+            git push
+            echo "Diagrama sincronizado."
+          else
+            echo "Sin cambios en la arquitectura."
+          fi

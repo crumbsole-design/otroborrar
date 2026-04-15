@@ -1,0 +1,45 @@
+name: Auto-Update Architecture Diagram
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - './**' # Solo ejecuta si tocas código, ahorra minutos
+  workflow_dispatch: # Botón manual por si acaso
+
+permissions:
+  contents: write # IMPORTANTE: Permiso para hacer commit del archivo generado
+
+jobs:
+  architect-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with: 
+            python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install openai
+
+      - name: Generate Diagram
+        env:
+          GH_MODELS_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
+        run: python .github/scripts/generate_diagram.py
+
+      - name: Commit & Push Diagram
+        run: |
+          git config --global user.name "motercode"
+          git config --global user.email "motercode@gmail.com"
+          
+          # Verificar si hubo cambios en el archivo
+          if [[ -n $(git status --porcelain docs/architecture.mmd) ]]; then
+            git add docs/architecture.mmd
+            git commit -m "docs: update architecture diagram [skip ci]"
+            git push
+            echo "Diagrama actualizado y pusheado."
+          else
+            echo "Sin cambios en la arquitectura."
+          fi
