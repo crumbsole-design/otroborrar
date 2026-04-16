@@ -6,7 +6,7 @@ method=url
 command=C:/msys64/mingw64/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;E:/Uned/lenguajes de  programacion/pregunta 4/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/download-googletest-populate.cmake;COMMAND;C:/msys64/mingw64/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;E:/Uned/lenguajes de  programacion/pregunta 4/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/verify-googletest-populate.cmake;COMMAND;C:/msys64/mingw64/bin/cmake.exe;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;E:/Uned/lenguajes de  programacion/pregunta 4/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/extract-googletest-populate.cmake
 source_dir=E:/Uned/lenguajes de  programacion/pregunta 4/build/_deps/googletest-src
 work_dir=E:/Uned/lenguajes de  programacion/pregunta 4/build/_deps
-url(s)=https://github.com/google/googletest/archive/refs/tags/release-1.14.0.zip
+url(s)=https://github.com/google/googletest/archive/refs/tags/v1.14.0.tar.gz
 hash=
       no_extract=
 

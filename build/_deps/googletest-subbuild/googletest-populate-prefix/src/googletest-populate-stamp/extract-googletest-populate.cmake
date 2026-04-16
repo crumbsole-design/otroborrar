@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 
 # Make file names absolute:
 #
-get_filename_component(filename "E:/Uned/lenguajes de  programacion/pregunta 4/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.14.0.zip" ABSOLUTE)
+get_filename_component(filename "E:/Uned/lenguajes de  programacion/pregunta 4/build/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.tar.gz" ABSOLUTE)
 get_filename_component(directory "E:/Uned/lenguajes de  programacion/pregunta 4/build/_deps/googletest-src" ABSOLUTE)
 
 message(VERBOSE "extracting...

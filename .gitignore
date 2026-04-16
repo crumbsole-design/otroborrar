@@ -1,0 +1,80 @@
+# .gitignore — CMake / C++ / Windows defaults
+# Build folders
+/build/
+/bin/
+/lib/
+/out/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+install_manifest.txt
+Testing/
+Makefile
+
+# Compiled object files and libraries
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
+
+# Debug / Release folders
+/Debug/
+/Release/
+
+# Editor and IDE directories
+.vscode/
+.idea/
+.vs/
+
+# JetBrains config
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Temporary and backup files
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Coverage and profiling
+coverage/
+*.gcno
+*.gcda
+*.gcov
+
+# Test artifacts
+/tests/*.o
+/tests/*.obj
+
+# Dependencies and external build subtrees
+/build/_deps/
+
+# CMake compile commands
+compile_commands.json
+
+# Logs and caches
+*.log
+*.cache
+
+# Python artifacts (if any)
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
