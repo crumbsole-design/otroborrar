@@ -1,0 +1,5 @@
+E:/Uned/lenguajes de  programacion/pregunta 4/build/CMakeFiles/transformations.dir
+E:/Uned/lenguajes de  programacion/pregunta 4/build/CMakeFiles/tests_runner.dir
+E:/Uned/lenguajes de  programacion/pregunta 4/build/CMakeFiles/test.dir
+E:/Uned/lenguajes de  programacion/pregunta 4/build/CMakeFiles/edit_cache.dir
+E:/Uned/lenguajes de  programacion/pregunta 4/build/CMakeFiles/rebuild_cache.dir

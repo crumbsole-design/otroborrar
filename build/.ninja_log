@@ -1,0 +1,11 @@
+# ninja log v7
+5	1099	7980310252281358	CMakeFiles/tests_runner.dir/tests/test_runner.cpp.obj	986d95b177e9dbba
+2	1135	7980310252185087	CMakeFiles/transformations.dir/src/transformations.cpp.obj	f6a3e748fbde32c3
+1136	1243	7980310263575267	libtransformations.a	872d9bc8f493a676
+1243	1370	7980310264635697	tests_runner.exe	b62eb78c170381f8
+18	519	7980310671429275	CMakeFiles/transformations.dir/src/transformations.cpp.obj	f6a3e748fbde32c3
+520	623	7980310676437833	libtransformations.a	872d9bc8f493a676
+623	748	7980310677479176	tests_runner.exe	b62eb78c170381f8
+15	480	7980311137085340	CMakeFiles/transformations.dir/src/transformations.cpp.obj	f6a3e748fbde32c3
+480	573	7980311141744493	libtransformations.a	872d9bc8f493a676
+573	677	7980311142678305	tests_runner.exe	b62eb78c170381f8
